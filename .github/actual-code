@@ -1,0 +1,41 @@
+  #include <iostream>
+using namespace std;
+
+class MARKS{
+    public:
+    int DEC2025[5], index;
+
+    void input(){
+        cout << "Enter the marks of 5 subjects: "<<endl;
+        for(index = 0; index < 5; index++){
+            cin >> DEC2025[index];
+        }
+    }
+    void access(){
+        cout << "The marks enterd are: "<<endl;
+        for(index = 0; index < 5; index++){
+            cout <<"Cell["<<index<<"]"<< DEC2025[index] << endl;
+        }
+    }
+     void AVG(){
+        double sum = 0;
+        for(int i = 0; i < 5; i++){
+            sum += DEC2025[i];
+        }
+        double average = sum / 5.0;
+        cout << "The average marks is: " << average << endl;
+}
+    void Reverse(){
+        cout<<"\nThe marks in reverse order are: "<<endl;
+        for(int i = 4; i >= 0; i--){
+            cout<<"Cell["<<i<<"]"<<DEC2025[i]<<endl;
+    }
+    }
+};
+int main(){
+    MARKS student;
+    student.input();
+    student.access();
+    student.AVG();
+    student.Reverse();
+}
